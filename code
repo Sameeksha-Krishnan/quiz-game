@@ -1,0 +1,44 @@
+import random
+class QA:
+def__init__(self,question,correct answer,other answers):
+  self.question=question
+  self.corrans=correct answer
+  self.otherans=other answers
+qalist=["Who was the first Indian woman in Space?","Kalpana Chawla",["Sunita Williams","Koneru Humpy","None of the above"],"Who was the first Indian in space?"
+,"Rakesh Sharma",["Vikram Ambalal","Ravish Malhotra","Nagapathi Bhat"],"Who was the first Man to Climb Mount Everest Without Oxygen?",
+"Phu Dorji",["Junnko Tabei","Reinhold Messner","Peter Habeler"],"Who built the Jama Masjid?","Shah Jahan",["Jahangir","Akbar","Imam Bukhari"],
+"Who wrote the Indian National Anthem?","Rabindranath Tagore",["Bakim Chandra Chatterji","Swami Vivekanand","None of the above"],
+"Who was the first Indian Scientist to win a Nobel Prize?","CV Raman",["Amartya Sen","Hargobind Khorana","Subramanian Chrandrashekar"],
+"Who is the first Indian to win a Nobel Prize?","Rabindranath Tagore",["CV Raman","Mother Theresa","Hargobind Khorana"],"Who was the first Indian woman to win the Miss World Title?",
+" Reita Faria",["Aishwarya Rai","Sushmita Sen","Diya Mirza"],"Who was the first President of India?","Dr. Rajendra Prasad",["Abdul Kalam",
+"Lal Bahadur Shastri","Zakir Hussain"],"Who was the first Indian to win the Booker Prize?","Aravind Adiga",["Dhan Gopal Mukerji","Nirad C. Chaudhuri",
+"Aravind Adiga"]]
+corrcount=0
+random.shuffle(qalist)
+for q in qalist:
+  print(q.question)
+  print("possible answer:")
+  possible=q.otherans+[q.corrans]
+  random.shuffle(possible)
+  count=0
+  if count<len(possible):
+  print(str(count+1)+":"+possible[count])
+  count=count+1
+  print("enter the correct no\n")
+  userans=input()
+  while not userans.isdigit():
+     print("that is not a no.\n please enter the correct no\n")
+     userans=input()
+  while not userans>0 and userans<len(possible):
+     print("invalid no.\n please enter the correct no\n")
+     usreans=input()
+  if possible(userans-1)==q.corrans:   
+    print("your answer is correct")
+    corrcount=corrcount+1
+  else:
+    print("wrong answer\n")
+    print("correct answer is"+q.corrans)
+    print("")
+    
+   print("your answer"+str(corrcount)+"of"+str(len(qalist)) 
+  
